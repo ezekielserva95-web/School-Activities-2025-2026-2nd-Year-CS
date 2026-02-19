@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main">
+      
+      <div id="header">
+        <h1>Header</h1>
+      </div>
+      
+      <div id="content">
+        <div id="contentTitle">Content</div>
+        <div id="resultBox"><p id="result"></p></div>
+      </div>
+      
+      <div id="sidebar">
+       <div id="sidebarTitle">Activities</div>
+       <div id="sidebarContents">
+         <input type="radio" id="act1" name="unit">
+         <label for="act1">#1: (Activity title)</label>
+         
+         <input type="radio" id="act2" name="unit">
+        <label for="act2">#2: (Activity title)</label>
+        
+        <input type="radio" id="act3" name="unit">
+        <label for="act3">#3: (Activity title)</label>
+        
+        <input type="radio" id="act4" name="unit">
+        <label for="act4">#4: (Activity title)</label>
+
+        <input type="radio" id="act5" name="unit">
+        <label for="act5">#5: (Activity title)</label>
+        
+        <input type="radio" id="act6" name="unit">
+        <label for="act6">#6: (Activity title)</label>
+        
+        <input type="radio" id="act7" name="unit">
+        <label for="act7">#7: (Activity title)</label>
+       </div>
+      </div>
+      
+      <div id="footer">
+        Footer
+      </div>
+      
+    </div>
+    
+  <script>
+    act1.addEventListener("click", event => {
+      window.alert("Welcome to JavaScript!");
+      console.log("This is my first JS program!");
+      result.textContent = "Check Console";
+      
+      result.innerHTML = 'Code: <br><br>window.alert("Welcome to JavaScript!"); <br> console.log("This is my first JS program!");'
+    });
+    
+    act2.addEventListener("click", event => {
+      let name = "Billy";
+      let age = 20;
+      let isStudent = true;
+      console.log(`My name is ${name}, I am ${age} years old`);
+      
+      result.innerHTML = 'Code: <br><br>let name = "Billy"; <br>let age = 20; <br>let isStudent = true; <br>console.log(`My name is ${name}, I am ${age} years old`);'
+   });
+   
+    act3.addEventListener("click", event => {
+      result.innerHTML = "check console";
+      let num1 = 5;
+      let num2 = 10;
+      
+      let sum = num1 + num2;
+      let difference = num1 - num2;
+      let product = num1 * num2;
+      let quotient = num1 / num2;
+      
+      console.log(`sum: ${num1} + ${num2} = ${sum}`);
+      console.log(`difference: ${num1} - ${num2} = ${difference}`);
+      console.log(`product: ${num1} * ${num2} = ${product}`);
+      console.log(`quotient: ${num1} / ${num2} = ${quotient}`);
+      
+      result.innerHTML = 'code: <br><br>let num1 = 5;<br>let num2 = 10; <br><br>let sum = num1 + num2; <br>let difference = num1 - num2; <br>let product = num1 * num2; <br>let quotient = num1 / num2; <br><br>console.log(`sum: ${num1} + ${num2} = ${sum}`); <br>console.log(`difference: ${num1} - ${num2} = ${difference}`); <br>console.log(`product: ${num1} * ${num2} = ${product}`); <br>console.log(`quotient: ${num1} / ${num2} = ${quotient}`);'
+    });
+    
+      act4.addEventListener("click", event => {
+        let name = window.prompt("What's your name?");
+        let number = window.prompt("What's your favorite number?");
+        window.alert(`Hello ${name}! Your favorite number is ${number}`);
+      
+      
+      result.innerHTML = 
+      'code: <br><br>let name = window.prompt("What is your name?"); <br>let number = window.prompt("What is your favorite number?"); <br>window.alert(`Hello ${name}! Your favorite number is ${number}`);'
+});
+
+      act5.addEventListener("click", event => {
+        let age = window.prompt("what is your age?");
+        if(age >= 18){
+          console.log("You are eligible!");
+        }
+        else{
+          console.log("You are not eligible");
+        }
+        
+        result.innerHTML = 'code: <br>let age = window.prompt("what is your age?"); <br>if (age >= 18) { <br>console.log("You are eligible!"); <br>} <br>else { <br>console.log("You are not eligible"); <br>}';
+      });
+      
+        
+      act6.addEventListener("click", event => {
+          for (let i = 1; i <= 10; i++){
+            console.log(i);
+          }
+          let j = 10;
+          while(j >= 1){
+            j--;
+            console.log(j);
+          }
+          result.innerHTML = 'for (let i = 1; i <= 10; i++) <br>{ console.log(i); <br>} <br><br>let j = 10; <br>while (j >= 1) { <br>j--; <br>console.log(j); <br>}';
+      });
+      
+      act7.addEventListener("click", event => {
+          result.innerHTML = 
+          '<button id="myBtn" style="font-size: 2.5em; background-color: blue; color: white;">Click Here</button><br><br><button id="showCode" style="background-color: gray; color: white;">View Code</button>';
+          result.style.textAlign = "center";
+          
+          
+          
+
+          
+          let myBtn = document.getElementById("myBtn");
+          myBtn.addEventListener("click", event => {
+            window.alert("Button Clicked!");
+          });
+    
+          showCode.addEventListener("click", event => {
+            result.style.textAlign = "left";
+            result.innerHTML = `
+--HTML-- <br>&lt;button id="myBtn"&gt;Click Here&lt;/button&gt;<br><br>
+--JavaScript-- <br>let myBtn = document.getElementById("myBtn");<br>
+myBtn.addEventListener("click", event => {<br>
+window.alert("Button Clicked!");<br>
+});
+`;
+          
+          });
+       });
+        
+      
+    
+  </script>
+</body>
+</html>

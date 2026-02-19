@@ -1,0 +1,85 @@
+#main{
+  display: grid;
+  height: 400px;
+  gap: 15px 10px;
+  grid-template-rows: 70px 1fr 50px;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas: 
+  "header header"
+  "content sidebar"
+  "footer footer";
+}
+#header{
+  background-color: #FF3939;
+  text-align: center;
+  font-weight: bold;
+  grid-area: header;
+  overflow: hidden;
+}
+#content{
+  background-color: #FFB439;
+  font-weight: bold;
+  font-size: 1.5em;
+  grid-area: content;
+  overflow-y: scroll;
+  display: grid;
+  grid-template-rows: 30px auto;
+}
+#result{
+  font-size: clamp(10px, 4vw, 15px);
+  border: 2px solid red;
+}
+#resultBox{
+  
+}
+#content #contentTitle{
+  text-align: center;
+  border: 2px solid black;
+  position: sticky;
+  top: 0;
+  background-color: #FFCF0B;
+}
+
+
+#sidebar {
+  background-color: #000000;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  grid-area: sidebar;
+  display: grid;
+  grid-template-rows: 30px auto;
+  overflow-y: scroll;
+}  
+  #sidebar #sidebarTitle{
+  border: 2px solid black;
+  position: sticky;
+  top: 0;
+  background-color: #DBF82C;
+}
+  #sidebar #sidebarContents{
+
+}
+input[type="radio"]{
+  display: none;
+}
+input[type="radio"] + label{
+  background-color: #A5A5A5;
+  display: block;
+  text-align: left;
+  border-top: 1px solid black;
+  padding: 3px 0px;
+}
+input[type="radio"]:checked + label{
+  background-color: #E5E5E5;
+}
+
+#footer {
+  background-color: #39E3FF;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  grid-area: footer;
+}
+
+
